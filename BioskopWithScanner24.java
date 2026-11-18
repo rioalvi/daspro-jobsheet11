@@ -27,6 +27,11 @@ public class BioskopWithScanner24 {
                         System.out.print("Masukan kolom (1-" + penonton[0].length + "): ");
                         kolom = sc.nextInt();
                         sc.nextLine();
+
+                        //Modifikasi pertanyaan 3
+                        if (baris < 1 || baris > penonton.length || kolom < 1 || kolom > penonton[baris - 1].length) {
+                            System.out.println("Nomor baris atau kolom tidak tersedia! Silahkan masukan lagi.");
+                        }
                     }
                 }
             }
