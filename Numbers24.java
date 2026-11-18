@@ -10,5 +10,7 @@ public class Numbers24 {
         for (int i = 0; i < myNumbers.length; i++) {
             System.out.println(Arrays.toString(myNumbers[i]));
         }
+        //Modifikasi Pertanyaan 3
+        System.out.println(Arrays.deepToString(myNumbers));
     }
 }
