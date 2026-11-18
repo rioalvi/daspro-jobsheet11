@@ -32,6 +32,27 @@ public class BioskopWithScanner24 {
                         if (baris < 1 || baris > penonton.length || kolom < 1 || kolom > penonton[baris - 1].length) {
                             System.out.println("Nomor baris atau kolom tidak tersedia! Silahkan masukan lagi.");
                         }
+                        //Modifikasi pertanyaan 4
+                        else if (penonton[baris - 1][kolom - 1] != null) {
+                            System.out.println("Kursi sudah terisi oleh " + penonton[baris -1][kolom - 1] + "! Pilih baris dan kolom lain.");
+                        } else {
+                            penonton[baris - 1][kolom - 1] = nama;
+                            break;
+                        }
+                    }
+
+                    System.out.print("Input penonton lainnya? (y/n): ");
+                    pilihan = sc.nextLine();
+                    if (pilihan.equalsIgnoreCase("n")) {
+                        break;
+                    }
+                }
+            } else if (menu == 2) {
+                System.out.println("--- Daftar Penonton ---");
+                for (int i = 0; i < penonton.length; i++) {
+                    System.out.print("Baris " + (i + 1) + ": ");
+                    for (int j = 0; j < penonton[i].length; j++) {
+
                     }
                 }
             }
