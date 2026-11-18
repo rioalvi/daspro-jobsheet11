@@ -2,26 +2,33 @@ import java.util.Scanner;
 public class BioskopWithScanner24 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int baris, kolom;
+        int baris, kolom, menu;
         String nama, pilihan;
         String[][] penonton = new String[4][2];
 
+        //Modifikasi pertanyaan 2
         while (true) {
-            System.out.print("Masukan nama: ");
-            nama = sc.nextLine();
-            System.out.print("Masukan baris: ");
-            baris = sc.nextInt();
-            System.out.print("Masukan kolom: ");
-            kolom = sc.nextInt();
+            System.out.println("=== MENU BIOSKOP ===");
+            System.out.println("1. Input data penonton");
+            System.out.println("2. tampilkan daftar penonton");
+            System.out.println("3. Exit");
+            System.out.print("Pilih menu (1-3): ");
+            menu = sc.nextInt();
             sc.nextLine();
 
-            penonton[baris - 1][kolom - 1] = nama;
+            if (menu == 1) {
+                while (true) {
+                    System.out.print("Masukan nama: ");
+                    nama = sc.nextLine();
 
-            System.out.print("Input penonton lainnya? (y/n): ");
-            pilihan = sc.nextLine();
-
-            if (pilihan.equalsIgnoreCase("n")) {
-                break;
+                    while (true) {
+                        System.out.print("Masukan baris (1-" + penonton.length + "): ");
+                        baris = sc.nextInt();
+                        System.out.print("Masukan kolom (1-" + penonton[0].length + "): ");
+                        kolom = sc.nextInt();
+                        sc.nextLine();
+                    }
+                }
             }
         }
     }
