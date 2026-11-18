@@ -3,7 +3,14 @@ import java.util.Scanner;
 public class SIAKAD24 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[][] nilai = new int[4][3];
+
+        //Modifikasi Pertanyaan 1
+        System.out.print("Masukan jumlah mahasiswa: ");
+        int jumlahMahasiswa = sc.nextInt();
+        System.out.println("Masukan jumlah mata kuliah: ");
+        int jumlahMataKuliah = sc.nextInt();
+
+        int[][] nilai = new int[jumlahMahasiswa][jumlahMataKuliah];
 
         for (int i = 0; i < nilai.length; i++) {
             System.out.println("Input nilai mahasiswa ke-" + (i + 1));
