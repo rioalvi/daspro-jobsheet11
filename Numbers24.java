@@ -12,5 +12,10 @@ public class Numbers24 {
         }
         //Modifikasi Pertanyaan 3
         System.out.println(Arrays.deepToString(myNumbers));
+
+        //Modifikasi Pertanyaan 5
+        for (int i = 0; i < myNumbers.length; i++) {
+            System.out.println("Panjang baris ke-" + (i + 1) + ": " + myNumbers[i].length);
+        }
     }
 }
