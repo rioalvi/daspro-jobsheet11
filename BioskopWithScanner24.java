@@ -52,9 +52,17 @@ public class BioskopWithScanner24 {
                 for (int i = 0; i < penonton.length; i++) {
                     System.out.print("Baris " + (i + 1) + ": ");
                     for (int j = 0; j < penonton[i].length; j++) {
-
+                        //Modifikasi pertanyaan 5
+                        String tampil = (penonton[i][j] == null) ? "***" : penonton[i][j];
+                        System.out.print(tampil + "\t" );
                     }
+                    System.out.println();
                 }
+            } else if (menu == 3) {
+                System.out.println("Terimakasih, program selesai.");
+                break;
+            } else {
+                System.out.println("Menu tidak valid!");
             }
         }
     }
